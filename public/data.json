@@ -1,0 +1,205 @@
+[
+  {
+    "id": "tile_001",
+    "title": "Ceramic Blue Tile",
+    "description": "Premium ceramic tile with blue glaze finish that enhances modern interiors with a smooth and glossy surface. It reflects light beautifully, making spaces brighter and more open. The tile is highly durable and resistant to moisture, stains, and scratches, making it ideal for kitchens, bathrooms, and living areas. Its calming blue tone creates a relaxing environment while adding a stylish touch. Easy to clean and maintain, this tile ensures long-lasting performance. Suitable for both residential and commercial use, it provides a perfect blend of elegance and practicality.",
+    "image": "https://images.unsplash.com/photo-1582582429416-3c3e3e2a5f92?w=600",
+    "category": "ceramic",
+    "price": 45.99
+  },
+  {
+    "id": "tile_002",
+    "title": "Marble White Tile",
+    "description": "Elegant white marble tile for modern homes that delivers a timeless and luxurious look. Its polished surface reflects light effectively, creating a spacious and clean feel. Made from high-quality materials, it is durable and resistant to moisture, ensuring long-term use. The natural marble texture adds sophistication and beauty to any space. It is easy to clean and maintain, making it ideal for bathrooms, kitchens, and hallways. This tile enhances both walls and floors with a premium finish.",
+    "image": "https://images.unsplash.com/photo-1560185127-6ed189bf02f4?w=600",
+    "category": "marble",
+    "price": 65.5
+  },
+  {
+    "id": "tile_003",
+    "title": "Wood Texture Tile",
+    "description": "Natural wood style tile with smooth finish that combines the beauty of wood with the durability of ceramic. It features realistic wood grain patterns, creating a warm and cozy atmosphere. Unlike natural wood, it resists water, termites, and scratches, making it highly practical. Easy to clean and maintain, it is perfect for living rooms, bedrooms, and kitchens. This tile provides long-lasting performance while maintaining an elegant appearance.",
+    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600",
+    "category": "wood",
+    "price": 39.99
+  },
+  {
+    "id": "tile_004",
+    "title": "Terrazzo Grey Tile",
+    "description": "Stylish terrazzo tile with grey pattern that adds a modern and artistic touch to interiors. The unique combination of stone chips creates a visually appealing surface. It is durable and suitable for high-traffic areas such as offices and hallways. The neutral grey color blends easily with different design styles. Easy to maintain, this tile ensures long-lasting beauty and functionality.",
+    "image": "https://images.unsplash.com/photo-1618220179428-22790b461013?w=600",
+    "category": "terrazzo",
+    "price": 55.25
+  },
+  {
+    "id": "tile_005",
+    "title": "Black Granite Tile",
+    "description": "Durable granite tile with black finish that offers strength and a bold appearance. The deep black tone enhances modern interiors and adds a premium look. Granite is naturally resistant to heat, scratches, and stains, making it ideal for high-use areas. The polished surface is easy to clean and maintain. Suitable for both walls and floors, it provides long-lasting durability.",
+    "image": "https://images.unsplash.com/photo-1615873968403-89e068629265?w=600",
+    "category": "granite",
+    "price": 70
+  },
+  {
+    "id": "tile_006",
+    "title": "Glossy White Tile",
+    "description": "Shiny glossy tile perfect for kitchens that creates a bright and clean atmosphere. Its reflective surface enhances lighting and makes rooms appear larger. It is resistant to stains and moisture, ensuring durability. Easy to maintain, it keeps its shine for years. Ideal for modern kitchens and bathrooms.",
+    "image": "https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=600",
+    "category": "ceramic",
+    "price": 42
+  },
+  {
+    "id": "tile_007",
+    "title": "Rustic Brown Tile",
+    "description": "Earthy rustic tile for cozy interiors that adds warmth and natural charm. Its textured surface creates a welcoming feel in living spaces. It is durable and easy to maintain, making it suitable for daily use. Perfect for homes that prefer a traditional and natural design.",
+    "image": "https://images.unsplash.com/photo-1505691723518-36a5ac3be353?w=600",
+    "category": "wood",
+    "price": 48.75
+  },
+  {
+    "id": "tile_008",
+    "title": "Polished Marble Tile",
+    "description": "Luxury polished marble surface tile that offers elegance and sophistication. Its smooth and glossy finish reflects light beautifully, enhancing brightness. Durable and easy to maintain, it is perfect for premium interiors. Suitable for both floors and walls.",
+    "image": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600",
+    "category": "marble",
+    "price": 80
+  },
+  {
+    "id": "tile_009",
+    "title": "Matte Grey Tile",
+    "description": "Minimal matte grey tile for modern look with a smooth, non-reflective surface. It provides a subtle and elegant appearance. Durable and easy to clean, it is ideal for contemporary interiors. The neutral tone matches any design style.",
+    "image": "https://images.unsplash.com/photo-1598300056393-4aac492f4344?w=600",
+    "category": "ceramic",
+    "price": 44.5
+  },
+  {
+    "id": "tile_010",
+    "title": "Patterned Mosaic Tile",
+    "description": "Decorative mosaic tile with patterns that adds artistic beauty to interiors. Perfect for accent walls and backsplashes. It is moisture-resistant and durable. Enhances visual appeal with unique designs.",
+    "image": "https://images.unsplash.com/photo-1615874694520-474822394e73?w=600",
+    "category": "mosaic",
+    "price": 60
+  },
+
+  {
+    "id": "tile_011",
+    "title": "Beige Stone Tile",
+    "description": "Natural beige stone tile that provides a warm and soft appearance. It blends well with various interior styles. Durable and easy to maintain, suitable for indoor and outdoor use.",
+    "image": "https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=600",
+    "category": "stone",
+    "price": 52
+  },
+  {
+    "id": "tile_012",
+    "title": "Dark Wood Tile",
+    "description": "Dark wooden texture tile that offers a rich and elegant look. Its deep tones add sophistication to interiors. Durable and resistant to moisture, suitable for long-term use.",
+    "image": "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=600",
+    "category": "wood",
+    "price": 47.3
+  },
+  {
+    "id": "tile_013",
+    "title": "Classic Marble Tile",
+    "description": "Timeless classic marble design that enhances elegance and luxury. Smooth surface ensures easy maintenance. Suitable for walls and floors.",
+    "image": "https://images.unsplash.com/photo-1592928302636-c83cf1dba1c1?w=600",
+    "category": "marble",
+    "price": 72
+  },
+  {
+    "id": "tile_014",
+    "title": "Outdoor Stone Tile",
+    "description": "Weather-resistant outdoor tile designed for durability. It withstands harsh conditions and provides a natural look. Ideal for patios and outdoor areas.",
+    "image": "https://images.unsplash.com/photo-1507089947367-19c1da9775ae?w=600",
+    "category": "stone",
+    "price": 58.9
+  },
+  {
+    "id": "tile_015",
+    "title": "Glossy Black Tile",
+    "description": "High-gloss black finish tile that adds depth and elegance. Reflective surface enhances lighting. Easy to clean and maintain.",
+    "image": "https://images.unsplash.com/photo-1578898886655-579a1f5c71c1?w=600",
+    "category": "ceramic",
+    "price": 49.99
+  },
+
+  {
+    "id": "tile_016",
+    "title": "Vintage Pattern Tile",
+    "description": "Vintage style decorative tile that brings classic charm. Unique patterns add character to interiors. Suitable for feature walls.",
+    "image": "https://images.unsplash.com/photo-1618220252344-8ec99ec624b1?w=600",
+    "category": "mosaic",
+    "price": 62.4
+  },
+  {
+    "id": "tile_017",
+    "title": "White Subway Tile",
+    "description": "Classic subway wall tile that offers a clean and timeless design. Perfect for kitchens and bathrooms. Easy to install and maintain.",
+    "image": "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=600",
+    "category": "ceramic",
+    "price": 35
+  },
+  {
+    "id": "tile_018",
+    "title": "Granite Floor Tile",
+    "description": "Heavy-duty granite floor tile built for strength and durability. Suitable for high-traffic areas. Maintains its look over time.",
+    "image": "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=600",
+    "category": "granite",
+    "price": 75
+  },
+  {
+    "id": "tile_019",
+    "title": "Light Wood Tile",
+    "description": "Light oak wood finish tile that creates a bright and airy feel. Natural design enhances comfort and style. Easy to maintain.",
+    "image": "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=600",
+    "category": "wood",
+    "price": 43.2
+  },
+  {
+    "id": "tile_020",
+    "title": "Modern Concrete Tile",
+    "description": "Industrial concrete style tile that offers a modern and raw appearance. Durable and suitable for contemporary spaces.",
+    "image": "https://images.unsplash.com/photo-1600585152915-d208bec867a1?w=600",
+    "category": "concrete",
+    "price": 50
+  },
+
+  {
+    "id": "tile_021",
+    "title": "Soft Cream Tile",
+    "description": "Soft cream colored tile that creates a warm and soothing environment. Blends well with various interior styles.",
+    "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600",
+    "category": "ceramic",
+    "price": 41
+  },
+  {
+    "id": "tile_022",
+    "title": "Luxury Gold Tile",
+    "description": "Premium gold accent tile that adds a luxurious and elegant touch. Ideal for decorative and high-end interiors.",
+    "image": "https://images.unsplash.com/photo-1618220179428-22790b461013?w=600",
+    "category": "luxury",
+    "price": 90
+  },
+  {
+    "id": "tile_023",
+    "title": "Classic Grey Tile",
+    "description": "Simple classic grey tile that offers versatility and modern appeal. Durable and easy to maintain.",
+    "image": "https://images.unsplash.com/photo-1598300056393-4aac492f4344?w=600",
+    "category": "ceramic",
+    "price": 46
+  },
+  {
+    "id": "tile_024",
+    "title": "Natural Stone Tile",
+    "description": "Raw natural stone finish tile that provides an authentic and rustic look. Ideal for natural themed interiors.",
+    "image": "https://images.unsplash.com/photo-1505691723518-36a5ac3be353?w=600",
+    "category": "stone",
+    "price": 57
+  },
+  {
+    "id": "tile_025",
+    "title": "Designer Mosaic Tile",
+    "description": "High-end designer mosaic tile that features intricate patterns. Adds artistic and stylish touch to any space.",
+    "image": "https://images.unsplash.com/photo-1615874694520-474822394e73?w=600",
+    "category": "mosaic",
+    "price": 68
+  }
+]

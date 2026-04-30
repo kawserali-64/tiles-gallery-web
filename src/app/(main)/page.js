@@ -1,6 +1,7 @@
 
 import BannerPage from "@/components/Banner";
 import BreakingText from "@/components/BreakingText";
+import FutureCard from "@/components/FutureCard";
 
 
 export default function Home() {
@@ -9,7 +10,7 @@ export default function Home() {
 
     <BannerPage/>
     <BreakingText/>
-   
+   <FutureCard/>
     
     </>
   );
