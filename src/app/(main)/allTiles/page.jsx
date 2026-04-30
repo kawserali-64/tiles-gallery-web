@@ -1,24 +1,70 @@
+'use client'
+
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-const AllTilesPage = async () => {
+const AllTilesPage = () => {
 
-    const res = await fetch('http://localhost:3000/data.json', {
-        cache: 'no-store'
-    });
-    const tiles = await res.json();
+    const [tiles, setTiles] = useState([]);
+    const [search, setSearch] = useState("");
+    const [query, setQuery] = useState(""); // 👈 actual search trigger
+
+    useEffect(() => {
+        fetch('http://localhost:3000/data.json')
+            .then(res => res.json())
+            .then(data => setTiles(data));
+    }, []);
+
+    // 👇 only filter when query changes
+    const filteredTiles = tiles.filter(t =>
+        t.category.toLowerCase().includes(query.toLowerCase()) ||
+        t.title.toLowerCase().includes(query.toLowerCase())
+    );
+
+    const handleSearch = () => {
+        setQuery(search); // 👈 button click e apply
+    };
 
     return (
         <div className='container mx-auto mt-6 space-y-6'>
 
+            {/* Header */}
             <div className='flex justify-between items-center'>
-                <h1 className='font-bold text-2xl'>All Tiles</h1>
+                <div className='space-y-2'>
+                    <h1 className='font-bold text-2xl'>All Tiles</h1>
+                    <p>Explore our complete collection of premium tiles.</p>
+
+                    {/* SEARCH */}
+                    <div className="flex gap-2 items-center">
+
+                        <label className="input flex items-center gap-2">
+                            🔍
+                            <input
+                                type="text"
+                                placeholder="Search by title or category"
+                                className="w-full"
+                                value={search}
+                                onChange={(e) => setSearch(e.target.value)}
+                            />
+                        </label>
+
+                        {/* BUTTON */}
+                        <button
+                            className='btn btn-primary'
+                            onClick={handleSearch}
+                        >
+                            Search
+                        </button>
+
+                    </div>
+                </div>
             </div>
 
+            {/* GRID */}
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
 
-                {tiles.map((t) => (
+                {filteredTiles.map((t) => (
                     <div key={t.id} className="card bg-base-100 shadow-md">
 
                         <figure className="relative h-48 w-full">
@@ -32,12 +78,16 @@ const AllTilesPage = async () => {
 
                         <div className="p-4">
                             <h2 className="font-bold">{t.title}</h2>
-                            <p className="text-sm text-gray-500 truncate">
-                                {t.description}
+                            <p className="font-semibold text-xl">${t.price}</p>
+
+                            <p className="text-sm text-gray-500">
+                                Category: {t.category}
                             </p>
-                            <p className="font-semibold">${t.price}</p>
+
                             <Link href={`/allTiles/${t.id}`}>
-                                <button className="btn btn-sm mt-2">View Details</button>
+                                <button className="btn btn-sm mt-2">
+                                    View Details
+                                </button>
                             </Link>
                         </div>
 

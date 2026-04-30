@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -33,10 +34,8 @@ const FutureCard = async () => {
 
             <div className="p-4">
               <h2 className="font-bold">{t.title}</h2>
-              <p className="text-sm text-gray-500 truncate">
-                {t.description}
-              </p>
-              <p className="font-semibold">${t.price}</p>
+              
+              <p className="font-semibold text-yellow-500">${t.price}/ <span className='text-gray-500'>{t.dimensions}</span></p>
               <Link href={`/allTiles/${t.id}`}>
                 <button className="btn btn-sm mt-2">View Details</button>
               </Link>
