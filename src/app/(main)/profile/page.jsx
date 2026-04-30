@@ -34,7 +34,7 @@ const MyProfile = () => {
                 <div className="flex justify-center mb-4">
                     <div className="w-28 h-28 relative">
                         <Image
-                            src={user.image || "/default-user.png"}
+                            src={user?.image || "/default-user.png"}
                             alt="user image"
                             fill
                             className="rounded-full object-cover border-4 border-primary"
@@ -43,15 +43,57 @@ const MyProfile = () => {
                 </div>
 
                 {/* Name */}
-                <h2 className="text-2xl font-bold">{user.name || "No Name"}</h2>
+                <h2 className="text-2xl font-bold">
+                    {user?.name || "No Name"}
+                </h2>
 
                 {/* Email */}
-                <p className="text-gray-500 mt-1">{user.email}</p>
+                <p className="text-gray-500 mt-1">
+                    {user?.email}
+                </p>
 
                 {/* Extra Info */}
-                <div className="mt-4 text-left space-y-2">
-                    <p><span className="font-semibold">User ID:</span> {user.id}</p>
-                    <p><span className="font-semibold">Verified:</span> {user.emailVerified ? "Yes" : "No"}</p>
+                <div className="mt-5 text-left space-y-2 bg-slate-50 p-4 rounded-lg">
+
+                    <p>
+                        <span className="font-semibold">User ID:</span>{" "}
+                        {user?.id}
+                    </p>
+
+                    <p>
+                        <span className="font-semibold">Email Verified:</span>{" "}
+                        {user?.emailVerified ? "Yes" : "No"}
+                    </p>
+
+                    <p>
+                        <span className="font-semibold">Created At:</span>{" "}
+                        {user?.createdAt
+                            ? new Date(user.createdAt).toLocaleString()
+                            : "N/A"}
+                    </p>
+
+                    <p>
+                        <span className="font-semibold">Updated At:</span>{" "}
+                        {user?.updatedAt
+                            ? new Date(user.updatedAt).toLocaleString()
+                            : "N/A"}
+                    </p>
+
+                    {/* Optional extra fields (if exist in DB) */}
+                    {user?.role && (
+                        <p>
+                            <span className="font-semibold">Role:</span>{" "}
+                            {user.role}
+                        </p>
+                    )}
+
+                    {user?.provider && (
+                        <p>
+                            <span className="font-semibold">Provider:</span>{" "}
+                            {user.provider}
+                        </p>
+                    )}
+
                 </div>
 
                 {/* Update Button */}
