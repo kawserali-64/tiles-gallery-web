@@ -8,7 +8,7 @@ const AllTilesPage = () => {
 
     const [tiles, setTiles] = useState([]);
     const [search, setSearch] = useState("");
-    const [query, setQuery] = useState(""); // 👈 actual search trigger
+    const [query, setQuery] = useState("");
 
     useEffect(() => {
         fetch('http://localhost:3000/data.json')
@@ -16,7 +16,6 @@ const AllTilesPage = () => {
             .then(data => setTiles(data));
     }, []);
 
-    // 👇 only filter when query changes
     const filteredTiles = tiles.filter(t =>
         t.category.toLowerCase().includes(query.toLowerCase()) ||
         t.title.toLowerCase().includes(query.toLowerCase())
@@ -39,7 +38,6 @@ const AllTilesPage = () => {
                     <div className="flex gap-2 items-center">
 
                         <label className="input flex items-center gap-2">
-                            🔍
                             <input
                                 type="text"
                                 placeholder="Search by title or category"
