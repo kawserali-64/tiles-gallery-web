@@ -5,9 +5,7 @@ import React from 'react';
 
 const FutureCard = async () => {
 
-  const res = await fetch('http://localhost:3000/data.json', {
-    cache: 'no-store'
-  });
+  const res = await fetch('https://tiles-gallery-web.vercel.app/data.json');
   const tiles = await res.json();
 
   const featuredTiles = tiles.slice(0, 4);

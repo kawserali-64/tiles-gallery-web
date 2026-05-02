@@ -1,29 +1,55 @@
-'use client'
+'use client';
 
 import Link from 'next/link';
 import React from 'react';
-import { authClient } from "@/lib/auth-client"
+import { usePathname } from 'next/navigation';
+import { authClient } from "@/lib/auth-client";
 import Image from 'next/image';
 
 const Navbar = () => {
-  const { data: session , isPending } = authClient.useSession()
+  const pathname = usePathname();
+
+  const { data: session, isPending } = authClient.useSession();
   const user = session?.user;
+
+  const isActive = (path) => pathname === path;
 
   const handleLogout = async () => {
     await authClient.signOut();
   };
 
+  const linkClass = (path) =>
+    `px-2 py-1 rounded-md transition ${
+      isActive(path)
+        ? "text-primary font-semibold border-b-2 border-primary"
+        : "hover:text-primary"
+    }`;
+
   const links = (
     <>
-      <li><Link href="/">Home</Link></li>
-      <li><Link href="/allTiles">All Tiles</Link></li>
-      <li><Link href="/profile">My Profile</Link></li>
+      <li>
+        <Link href="/" className={linkClass("/")}>
+          Home
+        </Link>
+      </li>
+
+      <li>
+        <Link href="/allTiles" className={linkClass("/allTiles")}>
+          All Tiles
+        </Link>
+      </li>
+
+      <li>
+        <Link href="/profile" className={linkClass("/profile")}>
+          My Profile
+        </Link>
+      </li>
     </>
   );
 
   return (
-    <div className="navbar bg-base-100 shadow-md px-4">
-      
+    <div className="navbar bg-base-100 shadow-md px-4 sticky top-0 z-50">
+
       {/* START */}
       <div className="navbar-start">
         <div className="dropdown">
@@ -36,7 +62,9 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <a className="btn btn-ghost text-xl font-bold">Tiles</a>
+        <Link href="/" className="btn btn-ghost text-xl font-bold">
+          Tiles
+        </Link>
       </div>
 
       {/* CENTER */}
@@ -49,17 +77,20 @@ const Navbar = () => {
       {/* END */}
       <div className="navbar-end flex items-center gap-3">
 
-        {isPending ?'loading...': user ? (
+        {isPending ? (
+          <span className="text-sm">loading...</span>
+        ) : user ? (
           <>
-            {/* User info */}
+            {/* User */}
             <div className="flex items-center gap-2">
-              <Image
-                src={user.image || "/default-user.png"}
-                alt="user"
-                width={50}
-                height={50}
-                className="rounded-full object-cover border"
-              />
+              <div className="w-[42px] h-[42px] relative rounded-full overflow-hidden border">
+                <Image
+                  src={user.image || "/default-user.png"}
+                  alt="user"
+                  fill
+                  className="object-cover"
+                />
+              </div>
 
               <span className="text-sm font-medium hidden md:block">
                 {user.name}
@@ -67,8 +98,9 @@ const Navbar = () => {
             </div>
 
             {/* Logout */}
-            <button className="btn btn-sm btn-primary"
-              onClick={async()=> await authClient.signOut()} 
+            <button
+              className="btn btn-sm btn-primary"
+              onClick={handleLogout}
             >
               Logout
             </button>

@@ -2,12 +2,9 @@ import Image from 'next/image';
 
 const PageTilesDetails = async ({ params }) => {
 
-    // ⚠️ Next.js 15+ এ params async হতে পারে
     const { id } = await params;
 
-    const res = await fetch('http://localhost:3000/data.json', {
-        cache: 'no-store'
-    });
+    const res = await fetch('https://tiles-gallery-web.vercel.app/data.json');
     const tiles = await res.json();
 
     const tile = tiles.find(t => t.id === id);
@@ -20,7 +17,6 @@ const PageTilesDetails = async ({ params }) => {
         <div className="container mx-auto p-6">
             <div className="max-w-3xl mx-auto bg-base-100 shadow-xl rounded-2xl overflow-hidden">
 
-                {/* Image */}
                 <figure className="relative h-[400px] w-full">
                     <Image
                         src={tile.image}

@@ -11,7 +11,7 @@ const AllTilesPage = () => {
     const [query, setQuery] = useState("");
 
     useEffect(() => {
-        fetch('http://localhost:3000/data.json')
+        fetch('https://tiles-gallery-web.vercel.app/data.json')
             .then(res => res.json())
             .then(data => setTiles(data));
     }, []);
