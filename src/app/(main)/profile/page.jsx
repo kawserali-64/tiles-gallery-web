@@ -98,7 +98,7 @@ const MyProfile = () => {
 
                 {/* Update Button */}
                 <Link href="/profile/update">
-                    <button className="btn btn-primary w-full mt-6">
+                    <button className="btn bg-[#824326] text-white w-full mt-6">
                         Update Profile
                     </button>
                 </Link>

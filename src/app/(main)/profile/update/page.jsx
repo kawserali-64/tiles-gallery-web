@@ -48,7 +48,7 @@ export default function UpdateProfilePage() {
                     placeholder="Image URL"
                 />
 
-                <button className="btn btn-primary w-full">
+                <button className="btn bg-[#824326] text-white w-full">
                     Save Changes
                 </button>
 

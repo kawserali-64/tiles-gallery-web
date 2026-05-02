@@ -30,7 +30,7 @@ const news = [
 ];
 const BreakingText = () => {
     return (
-        <div className='container mx-auto bg-gray-800 py-3 text-white mt-6 md:mt-10'>
+        <div className='container mx-auto bg-[#8d4336] py-3 text-white mt-6 md:mt-10'>
             <Marquee>
                 {news.map(n=>{
                     return <span className='mx-6' key={n.id}>{n.text}</span>

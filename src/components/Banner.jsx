@@ -24,7 +24,7 @@ const BannerPage = () => {
                     <p className="mb-5">
                         Explore our premium collection of tiles <br /> for every style and space.
                     </p>
-                    <button className="btn btn-primary">
+                    <button className="btn bg-[#824326] text-white">
                         Browser Now
                     </button>
                 </div>

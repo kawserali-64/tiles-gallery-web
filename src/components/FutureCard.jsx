@@ -14,7 +14,7 @@ const FutureCard = async () => {
     <div className='container mx-auto mt-3 space-y-3'>
       <div className='flex justify-between'>
         <h1 className='font-bold text-2xl'>Featured Tiles</h1>
-        <Link href={'/allTiles'}>View All</Link>
+        <p className='hover:text-[#824326] hover:underline'><Link href={'/allTiles'}>View All</Link></p>
       </div>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
 
@@ -35,7 +35,7 @@ const FutureCard = async () => {
               
               <p className="font-semibold text-yellow-500">${t.price}/ <span className='text-gray-500'>{t.dimensions}</span></p>
               <Link href={`/allTiles/${t.id}`}>
-                <button className="btn btn-sm mt-2">View Details</button>
+                <button className="btn btn-sm bg-[#824326] text-white mt-2">View Details</button>
               </Link>
             </div>
 

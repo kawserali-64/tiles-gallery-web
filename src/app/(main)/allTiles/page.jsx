@@ -49,7 +49,7 @@ const AllTilesPage = () => {
 
                         {/* BUTTON */}
                         <button
-                            className='btn btn-primary'
+                            className='btn bg-[#824326] text-white'
                             onClick={handleSearch}
                         >
                             Search
@@ -83,7 +83,7 @@ const AllTilesPage = () => {
                             </p>
 
                             <Link href={`/allTiles/${t.id}`}>
-                                <button className="btn btn-sm mt-2">
+                                <button className="btn btn-sm bg-[#824326] text-white mt-2">
                                     View Details
                                 </button>
                             </Link>

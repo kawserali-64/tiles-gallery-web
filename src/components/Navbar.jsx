@@ -19,10 +19,9 @@ const Navbar = () => {
   };
 
   const linkClass = (path) =>
-    `px-2 py-1 rounded-md transition ${
-      isActive(path)
-        ? "text-primary font-semibold border-b-2 border-primary"
-        : "hover:text-primary"
+    `px-2 py-1 rounded-md transition ${isActive(path)
+      ? "text-[#824326] font-semibold border-b-2 border-[#824326]"
+      : "hover:text-[#824326]"
     }`;
 
   const links = (
@@ -61,10 +60,13 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
+        <div className='flex justify-center items-center'>
+          <Image src="/tilesGellary.png" alt="logo" width={60} height={60} />
+          <Link href="/" className="btn btn-ghost text-xl font-bold">
+            Tiles Gallery
+          </Link>
 
-        <Link href="/" className="btn btn-ghost text-xl font-bold">
-          Tiles
-        </Link>
+        </div>
       </div>
 
       {/* CENTER */}
@@ -99,7 +101,7 @@ const Navbar = () => {
 
             {/* Logout */}
             <button
-              className="btn btn-sm btn-primary"
+              className="btn btn-sm bg-[#824326] text-white"
               onClick={handleLogout}
             >
               Logout
@@ -107,7 +109,7 @@ const Navbar = () => {
           </>
         ) : (
           <Link href="/login">
-            <button className="btn btn-sm btn-primary">
+            <button className="btn btn-sm bg-[#824326] text-white">
               Login
             </button>
           </Link>
