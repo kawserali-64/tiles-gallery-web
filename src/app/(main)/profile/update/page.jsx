@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { authClient } from "@/lib/auth-client"
 import { useSession } from "@/lib/auth-client"
+import toast from "react-hot-toast"
 
 export default function UpdateProfilePage() {
     const { data: session } = useSession()
@@ -14,12 +15,16 @@ export default function UpdateProfilePage() {
     const handleSubmit = async (e) => {
         e.preventDefault()
 
-        await authClient.updateUser({
-            name,
-            image
-        })
+        try {
+            await authClient.updateUser({
+                name,
+                image
+            })
 
-        alert("Profile Updated Successfully")
+            toast.success("Profile updated successfully")
+        } catch (error) {
+            toast.error(error.message)
+        }
     }
 
     return (
