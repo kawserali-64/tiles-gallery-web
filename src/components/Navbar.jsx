@@ -60,7 +60,7 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <div className='flex justify-center items-center'>
+        <div className='flex justify-center items-center ml-10'>
           <Image src="/tilesGellary.png" alt="logo" width={60} height={60} />
           <Link href="/" className="btn btn-ghost text-xl font-bold">
             Tiles Gallery

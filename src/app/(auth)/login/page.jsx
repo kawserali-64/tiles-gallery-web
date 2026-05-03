@@ -5,6 +5,7 @@ import Link from 'next/link';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { FcGoogle } from "react-icons/fc";
+import toast from "react-hot-toast";
 
 const LoginPage = () => {
     const { register, handleSubmit, formState: { errors } } = useForm()
@@ -18,7 +19,11 @@ const LoginPage = () => {
         });
 
         if (error) {
-            alert(error.message)
+            toast.error(error.message);
+        }
+
+        if (res) {
+            toast.success("Signup successful");
         }
     }
     const handleGoogleSignin = async () => {

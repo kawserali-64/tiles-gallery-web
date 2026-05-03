@@ -4,6 +4,7 @@ import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import toast from "react-hot-toast";
 
 const RegisterPage = () => {
     const { register,
@@ -21,10 +22,10 @@ const RegisterPage = () => {
         })
         console.log(res, error);
         if (error) {
-            alert(error.message)
+            toast.error(error.message);
         }
         if (res) {
-            alert("Signup successful")
+            toast.success("Signup successful");
             window.location.href='/'
         }
     }
