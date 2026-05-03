@@ -14,9 +14,9 @@ const RegisterPage = () => {
         const { email, name, password, image} = data
 
         const { data: res, error } = await authClient.signUp.email({
-            name: name, // required
-            email: email, // required
-            password: password, // required
+            name: name, 
+            email: email, 
+            password: password, 
             image: image,
             callbackURL: "/",
         })

@@ -32,7 +32,6 @@ export default function UpdateProfilePage() {
 
                 <h2 className="text-xl font-bold text-center">Update Profile</h2>
 
-                {/* Name */}
                 <input
                     className="input input-bordered w-full"
                     value={name}
@@ -40,7 +39,6 @@ export default function UpdateProfilePage() {
                     placeholder="Name"
                 />
 
-                {/* Image URL */}
                 <input
                     className="input input-bordered w-full"
                     value={image}

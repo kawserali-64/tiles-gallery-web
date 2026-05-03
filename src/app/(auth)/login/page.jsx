@@ -40,8 +40,6 @@ const LoginPage = () => {
                 <h2 className='font-bold text-3xl text-center mb-6'>Login Your Account</h2>
 
                 <form className='space-y-4' onSubmit={handleSubmit(handleLoginFunc)}>
-
-                    {/* Email */}
                     <fieldset className="fieldset">
                         <legend className="fieldset-legend">Email</legend>
                         <input
@@ -53,7 +51,6 @@ const LoginPage = () => {
                         {errors.email && <p className='text-red-500 text-sm'>{errors.email.message}</p>}
                     </fieldset>
 
-                    {/* Password */}
                     <fieldset className="fieldset">
                         <legend className="fieldset-legend">Password</legend>
                         <input
@@ -65,17 +62,11 @@ const LoginPage = () => {
                         {errors.password && <p className='text-red-500 text-sm'>{errors.password.message}</p>}
                     </fieldset>
 
-                    {/* Login button */}
                     <button className="btn w-full btn-primary">Login</button>
                 </form>
 
-                {/* Divider */}
                 <div className="divider">OR</div>
-
-                {/* Social buttons */}
                 <div className="space-y-3">
-
-                    {/* Google */}
                     <button className="btn w-full flex items-center justify-center gap-2 border border-gray-300 bg-white hover:bg-gray-100 text-black"
                         onClick={handleGoogleSignin}>
                         <FcGoogle size={20} />

@@ -19,7 +19,8 @@ const FutureCard = async () => {
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
 
         {featuredTiles.map((t) => (
-          <div key={t.id} className="card bg-base-100 shadow-md">
+          <div key={t.id}
+            className="card bg-base-100 shadow-md transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl cursor-pointer">
 
             <figure className="relative h-48 w-full">
               <Image
@@ -32,7 +33,7 @@ const FutureCard = async () => {
 
             <div className="p-4">
               <h2 className="font-bold">{t.title}</h2>
-              
+
               <p className="font-semibold text-yellow-500">${t.price}/ <span className='text-gray-500'>{t.dimensions}</span></p>
               <Link href={`/allTiles/${t.id}`}>
                 <button className="btn btn-sm bg-[#824326] text-white mt-2">View Details</button>

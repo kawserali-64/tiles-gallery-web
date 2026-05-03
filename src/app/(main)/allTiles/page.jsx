@@ -22,19 +22,17 @@ const AllTilesPage = () => {
     );
 
     const handleSearch = () => {
-        setQuery(search); // 👈 button click e apply
+        setQuery(search);
     };
 
     return (
         <div className='container mx-auto mt-6 space-y-6'>
 
-            {/* Header */}
             <div className='flex justify-between items-center'>
                 <div className='space-y-2'>
                     <h1 className='font-bold text-2xl'>All Tiles</h1>
                     <p>Explore our complete collection of premium tiles.</p>
 
-                    {/* SEARCH */}
                     <div className="flex gap-2 items-center">
 
                         <label className="input flex items-center gap-2">
@@ -47,7 +45,6 @@ const AllTilesPage = () => {
                             />
                         </label>
 
-                        {/* BUTTON */}
                         <button
                             className='btn bg-[#824326] text-white'
                             onClick={handleSearch}
@@ -59,11 +56,11 @@ const AllTilesPage = () => {
                 </div>
             </div>
 
-            {/* GRID */}
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
 
                 {filteredTiles.map((t) => (
-                    <div key={t.id} className="card bg-base-100 shadow-md">
+                    <div key={t.id}
+                        className="card bg-base-100 shadow-md transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl cursor-pointer">
 
                         <figure className="relative h-48 w-full">
                             <Image
